@@ -1,0 +1,113 @@
+- description: >-
+    This station is a combination of different sensors. The temperature, humidity, air pressure, amount of rain, condensation point, wind speed and direction, solar radiation and the number of particles of various sizes in the air (fine dust) are measured. The weather station is operated independently using a solar module. The measured results are periodically sent via the local LoRaWAN network to our backend, which processes the data for display. This sensor is part of the LoRaPark at Weinhof.
+    Data and visualization are presented on the local display or at lorapark.de. The sensor data are also made freely available to the public on the Ulm data platform under a CC-0 license.
+  domains:
+    - weather_station
+  id: davis-013d4d
+  location:
+    latitude: 48.396426
+    longitude: 9.990453
+  name: Weather Station
+
+- description: This device contains sensors for measuring temperature and humidity and four electrochemical gas sensors. In this case the gases nitrogen dioxide (NO2), carbon monoxide (CO), ozone (O) and sulfur dioxide (SO2) are measured. This allows conclusions to be drawn about the air quality. The measurement results are periodically sent to our backend via the local LoRaWAN network and processed there for display.
+  domains:
+    - air_quality
+  id: dl-ac-001-70b3d57ba0000fc9
+  location:
+    latitude: 48.397206
+    longitude: 9.991628
+  name: Air Quality
+
+- description: With the help of several microphones, an average noise exposure at the intersection with Neue Straße is determined.
+  domains:
+    - sound_sensor
+  id: iotsoundsensor-deadbeef13374326
+  location:
+    latitude: 48.397206
+    longitude: 9.991628
+  name: Sound Sensor
+
+- description: With this sensor, the filling level of a container can be determined using an ultrasonic distance measurement. If the container is full, a collection can be triggered automatically. This not only offers the advantage that there is no littering in the city, but also unnecessary emptying can be saved and the route can be adapted to the actual needs during collection.
+  domains:
+    - waste_level
+  id: "71191"
+  location:
+    latitude: 48.396395
+    longitude: 9.991161
+  name: Waste Level
+
+- description: ""
+  domains:
+    - feedback_button
+  id: sa000805-70b3d53260008600
+  location:
+    latitude: 48.397354
+    longitude: 9.993039
+  name: Feedback Button
+
+- description: The beautiful bike and foot paths along the Danube are very popular. Under the bridges the path is only a few centimeters above the normal level of the river. This condition can change within a short time after rain, so that flooding quickly becomes a problem. With our solution, the flood is detected immediately, transmitted via the LoRaWAN network and further measures such as a blockade can be initiated. Battery operated, the sensor has a running time of approx. 4 years.
+  domains:
+    - flood_data
+  id: ultrasonic1
+  location:
+    latitude: 48.396016
+    longitude: 9.995969
+  name: Flood Data
+
+- description: >-
+    This sensor is located underground at a depth of approx. 50 cm. There, the sensor measures the electrical conductivity, the volume water content, the temperature and the degree of water saturation in the soil. The sensor is connected to the transmitter module located above the ground surface via a cable. This way, targeted and economical irrigation can take place. The measurement data are periodically sent to our backend via the local LoRaWAN network. This data is processed there for display
+    purposes.
+  domains:
+    - ground_humidity
+  id: soil_283d7a28b8ee0567
+  location:
+    latitude: 48.39677
+    longitude: 9.99096
+  name: Ground Humidity
+
+- description: The person counter sensor used in the LoRaPark counts the number of people who carry their smartphones with them. Every smartphone with an activated Bluetooth or WiFi module sends out beacons that, e.g. signal to a router that a device is on site. The person counter uses these beacons to determine an approximate number of people. This happens anonymously and without identifying the person himself.
+  domains:
+    - person_count
+  id: ttgo-paxcounter01
+  location:
+    latitude: 48.396426
+    longitude: 9.990453
+  name: Person Count
+
+- description: This door opening sensor is installed at the common entrance to the digital agenda and the digitization center at Weinhof 7. A magnetic field is used to measure whether the entrance door is currently open or closed. The status is then transmitted via LoRaWAN in an energy-saving manner. A battery that lasts for several years is sufficient as a power source. The first experiments are underway to use the magnetic contact itself as a power source.
+  domains:
+    - door
+  id: elsysems-a81758fffe04887a
+  location:
+    latitude: 48.396607
+    longitude: 9.990208
+  name: Door
+
+- description: >-
+    The self-sufficient raised garden irrigates itself independently and automatically via an integrated water tank, depending on the humidity of the soil in the flowerpot. The measurement of the soil moisture is regulated by tensiometers, which - like plants themselves - determine the water content in the soil via the suction tension. If the humidity level is too low, watering is triggered. To monitor the flowerpot, especially the water level in the tank and the soil moisture, sensor data are
+    regularly sent via LoRaWAN, which, for example, can facilitate joint urban gardening projects.
+  domains:
+    - raised_garden
+  id: node1
+  location:
+    latitude: 48.396472
+    longitude: 9.99047
+  name: Raised Garden
+
+- description: Changes in cracks at Ulm Muenster are historically marked with graph paper. Today, a laser sensor with measuring accuracies in the micrometer range takes over this monitoring and sends the measurement data to our backend at regular intervals via LoRaWAN. A mathematical model analyzes the raw data and corrects noise and fluctuations in this high-precision measurement.
+  domains:
+    - structure_damage
+  id: feather01
+  location:
+    latitude: 48.39863
+    longitude: 9.992465
+  name: Structure Damage
+
+- description: The Donaubad, the largest adventure pool in the region, with its flow channel, relaxation pool or the 36 degree warm thermal water pool also relies on LoRaWAN and IoT applications. In addition to the water temperature, the amount of heat and the CO2 value of the room air are also monitored.
+  domains:
+    - energy
+  id: "000003"
+  location:
+    latitude: 48.386126
+    longitude: 9.986219
+  name: Energy Data

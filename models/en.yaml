@@ -1,0 +1,268 @@
+weather_station:
+  name: Weather station
+  metrics:
+    avgwindspeed: #0
+      name: Average wind speed
+      type: numerical
+      unit: "m/s"
+    bartrend: #Falling Slowly
+      name: bartrend
+      type: text
+    date: #"22/08/2018 08:42:46"
+      name: Date
+      type: date
+      format: dd/mm/yyyy hh:mm:ss
+    dayet: #0.03
+      name: dayet
+    dayrain: #0.0
+      name: dayrain
+    forecasticon: #"Mostly Cloudy, Rain within 12 hours"
+      name: forecasticon
+      type: text
+    outsidehumidity: #72
+      name: Outside humidity
+      type: numerical
+      unit: "%"
+    pm1: #28
+      name: PM1
+      type: numerical
+      unit: "µg/m³"
+    pm10: #38
+      name: PM10
+      type: numerical
+      unit: "µg/m³"
+    pm25: #32
+      name: PM25
+      type: numerical
+      unit: "µg/m³"
+    pressure: #960.24
+      name: Pressure
+      type: numerical
+      unit: "hPa"
+    rainrate: #0.0
+      name: Rain rate
+      type: numerical
+      unit: "l/h"
+    soilmoistures: #
+      name: Soil moistures
+      type: numerical
+      unit: "%"
+    solarradiation: #0
+      name: Solar radiation
+      type: numerical
+    temperature: #3.89
+      name: Temperatur
+      type: numerical
+      unit: "°C"
+    uv: #255
+      name: UV
+      type: numerical
+    winddirection: #279
+      name: Wind direction
+      type: numerical
+      unit: "°"        
+    windspeed: #0.0
+      name: Wind speed
+      type: numerical
+      unit: "m/s"
+
+person_count_:
+  timestamp: timestamp of the last data
+  paxcount: number of persons/electronic devices found
+
+door_:
+  timestamp: timestamp of the last data
+  extdigital: if the door is closed
+
+feedback_button_:
+  timestamp: timestamp of the last data
+  button1: very pleased
+  button2: pleased
+  button3: unsatisfied
+  button4: very unsatisfied
+
+electricity_:
+  timestamp: timestamp of the last data
+  value: electricity consumption
+
+waste_level_:
+  name: Waste level
+  metrics:
+    errorcode:
+      name: errorcode
+      unit: 
+    filling:
+      name: filling
+      unit: 
+    length:
+      name: Room left for garbage
+      unit: cm
+    temperature:
+      name: temperature
+      unit: "°C"
+    tiltstatus:
+      name: tiltstatus
+      unit: 
+
+sound_sensor_:
+  name: Sound sensor
+  metrics:
+    id: 
+      name: id
+      unit: 
+    timestamp: 
+      name: timestamp
+      unit: 
+    firstdbafast: 
+      name: firstdbafast
+      unit: 
+    firstdbaslow: 
+      name: firstdbaslow
+      unit: 
+    firstdbcfast: 
+      name: firstdbcfast
+      unit: 
+    firstdbcslow: 
+      name: firstdbcslow
+      unit: 
+    firstleqa: 
+      name: firstleqa
+      unit: 
+    firstleqc: 
+      name: firstleqc
+      unit: 
+    latitude: 
+      name: latitude
+      unit: 
+    longitude: 
+      name: longitude
+      unit: 
+    seconddbafast: 
+      name: seconddbafast
+      unit: 
+    seconddbaslow: 
+      name: seconddbaslow
+      unit: 
+    seconddbcfast: 
+      name: seconddbcfast
+      unit: 
+    seconddbcslow: 
+      name: seconddbcslow
+      unit: 
+    secondleqa: 
+      name: secondleqa
+      unit: 
+    secondleqc: 
+      name: secondleqc
+      unit: 
+    version: 
+      name: version
+      unit: 
+    voltage: 
+      name: voltage
+      unit: 
+
+flood_data_:
+  timestamp: timestamp of the last data
+  distance: If the distance decreases, the water level is rising.
+
+raised_garden_:
+  timestamp: timestamp of the last data
+  tensio_pressure: humidity
+  watertank_empty: if the water tank is empty
+
+structure_damage_:
+  timestamp: timestamp of the last data
+
+ground_humidity_:
+  timestamp: timestamp of the last data
+  temperature: ground temperature
+  vwc: soil humidity
+
+air_quality:
+  name: Sound sensor
+  metrics:
+    battery:
+      name: Battery voltage
+      unit: V
+    co:
+      name: CO level
+      unit: ppm
+    coaux:
+      name: 
+      unit: 
+    coconcentration:
+      name: 
+      unit: 
+    coconcentrationaux:
+      name: 
+      unit: 
+    humidity:
+      name: Humidity
+      unit: "%"
+    no:
+      name: NO level
+      unit: 
+    no2:
+      name: NO2 level
+      unit: 
+    no2aux:
+      name: 
+      unit: 
+    no2concentration:
+      name: 
+      unit: 
+    no2concentrationaux:
+      name: 
+      unit: 
+    noaux:
+      name: 
+      unit: 
+    noconcentration:
+      name: 
+      unit: 
+    noconcentrationaux:
+      name: 
+      unit: 
+    ox:
+      name: OX level
+      unit: 
+    oxaux:
+      name: 
+      unit: 
+    oxconcentration:
+      name: 
+      unit: 
+    oxconcentrationaux:
+      name: 
+      unit: 
+    temperature:
+      name: Temperature
+      unit: "°C"
+
+
+parking_state_:
+  timestamp: timestamp of the last data
+  occupied: if the parking space is occupied
+
+parking_events_:
+  timestamp: timestamp of the last data
+  parkingEvents: unknown
+
+parking_duration_:
+  timestamp: timestamp of the last data
+  averageParkingDuration: unknown
+
+parking_history_:
+  timestamp: timestamp of the last data
+  occupationList: unknown
+  start: unknown
+
+energy_:
+  timestamp: timestamp of the last data
+  flowtemperature: temperatur of water coming in
+  returntemperature: temperatur of water going out
+
+co2_:
+  timestamp: timestamp of the last data
+  co2: co2 concentration
