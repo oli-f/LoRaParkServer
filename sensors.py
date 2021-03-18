@@ -99,15 +99,15 @@ class Sensors:
 								'name': (domain_model.get('name', domain) + ': ' if len(domains) > 1 else '') + metric.get('name', key),
 								'value': value,
 								'unit': metric.get('unit', ''),
-								'timestamp': values['timestamp']
+								'timestamp': values.get('timestamp', None)
 							}
-				else:
+				else: # domain has no model, use plain values instead
 					for key, value in values.items():
 						yield {
 							'name': domain + ': ' + key,
 							'value': value,
 							'unit': '',
-							'timestamp': values['timestamp']
+							'timestamp': values.get('timestamp', None)
 						}
 		return list(generate())
 	

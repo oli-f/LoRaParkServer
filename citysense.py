@@ -123,43 +123,8 @@ class Citysense:
 		logger.info("Pulling sensors...")
 
 		for domain, sensor_list in sensors.items():
-			start = None
-			for sensor in sensor_list:
-				sensor_data = self._sensors.get_sensor_domain(id=sensor, domain=domain)
-				if not sensor_data or not 'timestamp' in sensor_data: continue
+			logger.info("Pulling sensors {} from {}".format(sensor_list, domain))
+			data = self.get_sensor(domain, id=sensor_list, count=1, **kwargs)
 
-				sensor_timestamp = datetime.datetime.strptime(sensor_data['timestamp'], '%Y-%m-%dT%H:%M:%S.%f%z')
-				
-				if not start or sensor_timestamp > start:	# use the oldest timestamp within the domain as 'start'
-					start = sensor_timestamp
-
-			# if start timestamp exists, convert it back to str
-			if start:
-				start = datetime.datetime.strftime(start, '%Y-%m-%dT%H:%M:%S.%f%z')
-
-			logger.info("Pulling sensors {} from {} with start {}".format(sensor_list, domain, start))
-			data = self.get_sensor(domain, id=sensor_list, start=start, **kwargs)
-
-			last = None
-			last_timestamp = None
 			for sensor_data in data:
-				sensor_timestamp = datetime.datetime.strptime(sensor_data['timestamp'], '%Y-%m-%dT%H:%M:%S.%f%z')
-
-				if not last:
-					last = sensor_data
-					last_timestamp = sensor_timestamp
-
-				if sensor_data['id'] != last['id']:
-					last_timestamp = datetime.datetime.strftime(last['timestamp'], '%Y-%m-%dT%H:%M:%S.%f%z')
-					self._sensors.set(domain=domain, id=last['id'], data=last)
-
-					last = sensor_data
-				
-				if sensor_timestamp >= last_timestamp: # !important to use >= because of first element thats assigned to 'last'
-					last = sensor_data
-					last_timestamp = sensor_timestamp
-			
-			if not last == None:
-				self._sensors.set(domain=domain, id=last['id'], data=last)
-
-		# TODO trigger update
+				self._sensors.set(domain=domain, id=sensor_data['id'], data=sensor_data)
