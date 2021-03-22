@@ -31,45 +31,6 @@ citysense:
 sensors:
   sensors_file: sensors.yaml
   model_directory: models
-#   :
-#     - "elsyselt-a81758fffe04c61f"
-#   door:
-#     - "elsysems-a81758fffe04887a"
-#   weather_station:
-#     - "davis-013d4d"
-#   feedback_button:
-#     - "sa000805-70b3d53260008600"
-#   person_count:
-#     - "ttgo-paxcounter01"
-#   sound_sensor:
-#     - "iotsoundsensor-deadbeef13374326"
-#   flood_data:
-#     - "ultrasonic1"
-#     - "ultrasonic2"
-#   raised_garden:
-#     - "node1"
-#   :
-#     - "node2"
-#   :
-#     - "node3abp"
-#   :
-#     - "node4"
-#   :
-#     - "sensor000"
-#   structure_damage:
-#     - "feather01"
-#   air_quality:
-#     - "dl-ac-001-70b3d57ba0000fc9"
-#   ground_humidity:
-#     - "soil_283d7a28b8ee0567"
-#   waste_level:
-#     - "71191"
-#   co2:
-#     - "elsysco2-045184"
-#     - "elsysco2-048e67"
-#   energy:
-#     - "70113173"
-#     - "000003"
 
 rest:
   debug: true
